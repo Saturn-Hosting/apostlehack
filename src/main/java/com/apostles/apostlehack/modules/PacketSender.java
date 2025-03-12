@@ -1,5 +1,6 @@
 package com.apostles.apostlehack.modules;
 
+import com.apostles.apostlehack.packet.ExamplePacket;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
@@ -25,8 +26,8 @@ public class PacketSender extends Module {
     public void onActivate() {
         ClientPlayNetworkHandler networkHandler = mc.getNetworkHandler();
 
-        LoginHelloC2SPacket login = new LoginHelloC2SPacket("azedev", UUID.randomUUID());
+        CustomPayloadC2SPacket examplePacket = new CustomPayloadC2SPacket(new ExamplePacket("test!"));
 
-        networkHandler.sendPacket(login);
+        networkHandler.sendPacket(examplePacket);
     }
 }
