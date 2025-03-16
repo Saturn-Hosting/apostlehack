@@ -1,6 +1,6 @@
 package com.apostles.apostlehack;
 
-import com.apostles.apostlehack.modules.PacketSender;
+import com.apostles.apostlehack.modules.NoTeleportAccept;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Category;
@@ -16,7 +16,7 @@ public class ApostleHack extends MeteorAddon {
         LOG.info("Initializing ApostleHack");
 
         // Modules
-        Modules.get().add(new PacketSender());
+        Modules.get().add(new NoTeleportAccept());
     }
 
     @Override
